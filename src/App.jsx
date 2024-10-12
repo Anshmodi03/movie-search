@@ -66,6 +66,7 @@ function App() {
           ></Box>
           <Typography
             variant="h4"
+             style={{ marginTop: "40px" }}
             gutterBottom
             className={styles.bubble} // Apply bubble text effect here
           >
