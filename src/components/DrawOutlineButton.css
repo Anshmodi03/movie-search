@@ -1,0 +1,69 @@
+/* src/components/DrawOutlineButton.css */
+.draw-outline-button {
+  position: relative;
+  padding: 10px 20px;
+  font-weight: 500;
+  color: #000000;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s ease;
+}
+
+.draw-outline-button:hover {
+  color: #00925a;
+}
+
+.draw-outline-button .top-line,
+.draw-outline-button .right-line,
+.draw-outline-button .bottom-line,
+.draw-outline-button .left-line {
+  position: absolute;
+  background-color: #000000;
+  transition: all 0.4s ease;
+}
+
+.draw-outline-button .top-line {
+  left: 0;
+  top: 0;
+  height: 2px;
+  width: 0;
+}
+
+.draw-outline-button .right-line {
+  right: 0;
+  top: 0;
+  width: 2px;
+  height: 0;
+}
+
+.draw-outline-button .bottom-line {
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+}
+
+.draw-outline-button .left-line {
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+}
+
+.draw-outline-button:hover .top-line {
+  width: 100%;
+}
+
+.draw-outline-button:hover .right-line {
+  height: 100%;
+}
+
+.draw-outline-button:hover .bottom-line {
+  width: 100%;
+}
+
+.draw-outline-button:hover .left-line {
+  height: 100%;
+}
