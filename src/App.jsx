@@ -1,15 +1,8 @@
 import React, { useState } from "react";
-import {
-  Container,
-  TextField,
-  Button,
-  Typography,
-  IconButton,
-  Box,
-} from "@mui/material";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { Container, TextField, Typography, Box } from "@mui/material";
 import MovieList from "./components/MovieList";
 import Playlist from "./components/Playlist";
+import DrawOutlineButton from "./components/DrawOutlineButton"; // Import the button
 import "./App.css";
 
 function App() {
@@ -84,27 +77,16 @@ function App() {
               fullWidth
               style={{ marginBottom: "20px" }}
             />
-            <Button
-              variant="outlined"
-              type="submit"
-              style={{
-                fontWeight: "500",
-                color: "#000",
-                border: "1px solid #363b3b",
-              }}
-            >
-              Search
-            </Button>
+            <DrawOutlineButton type="submit">Search</DrawOutlineButton>
           </form>
           {isLoading && <Typography>Loading...</Typography>}
           <MovieList movies={results} addToPlaylist={addToPlaylist} />
-          <Button
-            variant="outlined"
+          <DrawOutlineButton
             onClick={confirmPlaylist}
-            style={{ marginTop: "30px", fontWeight: "500", color: "#000" }}
+            style={{ marginTop: "30px" }}
           >
             Confirm Playlist
-          </Button>
+          </DrawOutlineButton>
         </>
       ) : (
         <Playlist movies={playlist} color={handleColor} />
