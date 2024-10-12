@@ -1,8 +1,10 @@
+// src/App.jsx
 import React, { useState } from "react";
 import { Container, TextField, Typography, Box } from "@mui/material";
 import MovieList from "./components/MovieList";
 import Playlist from "./components/Playlist";
 import DrawOutlineButton from "./components/DrawOutlineButton"; // Import the button
+import styles from "./bubble.module.css"; // Import bubble text styles
 import "./App.css";
 
 function App() {
@@ -62,7 +64,11 @@ function App() {
             width="100%"
             marginTop="-40px"
           ></Box>
-          <Typography variant="h4" gutterBottom style={{ alignText: "start" }}>
+          <Typography
+            variant="h4"
+            gutterBottom
+            className={styles.bubble} // Apply bubble text effect here
+          >
             Movie Search Website
           </Typography>
           <form
